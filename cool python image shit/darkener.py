@@ -49,7 +49,7 @@ def is_valid_saturation():
             print("Please enter a valid integer.")
             continue
         
-        if -1 < question < 10:
+        if -1 < question < 11:
             return question
         else:
             print("Invalid threshold. Please enter a value between 0 and 10.")
