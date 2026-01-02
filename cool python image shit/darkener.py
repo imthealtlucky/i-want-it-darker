@@ -32,7 +32,7 @@ def is_valid_threshold():
             print("Please enter a valid integer.")
             continue
         
-        if -1 < question < 255:
+        if -1 < question < 256:
             return question
         else:
             print("Invalid threshold. Please enter a value between 0 and 255.")
@@ -87,3 +87,4 @@ img.filter
 
 img.save("black_image.png")
 print("Modified image saved as black_image.png")
+
