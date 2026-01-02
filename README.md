@@ -8,3 +8,5 @@ first you will need to run this command:
 python darkener.py
 ```
 then add image to the "*image*" folder
+
+# HAVE FUN DARKING IMAGE!!!
