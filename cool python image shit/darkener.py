@@ -70,13 +70,15 @@ print("Pixel data at (0,0):", px[0, 0])
 if img.mode != "RGB":
     img = img.convert("RGB")
     px = img.load()
+if darkene > 0:
+    print("loading... (this may take a while depending on image size)")
+    for x in range(img.width):
+        for y in range(img.height):
+            if px[x, y] < (darkene, darkene, darkene):
+                px[x, y] = (0, 0, 0)
 
-print("image loading... (this may take a while depending on image size)")
-for x in range(img.width):
-    for y in range(img.height):
-        if px[x, y] < (darkene, darkene, darkene):
-            px[x, y] = (0, 0, 0)
-            
+
+
         
 img = ImageEnhance.Color(img).enhance(saturation)
 # Show and save the modified image
